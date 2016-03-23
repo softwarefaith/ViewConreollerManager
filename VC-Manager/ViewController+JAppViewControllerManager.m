@@ -10,7 +10,28 @@
 
 @implementation ViewController (JAppViewControllerManager)
 
+
+#pragma mark -Start
+
+-(void)startViewController:(UIViewController *)otherViewController startMode:(JAppStartViewControllerMode)mode{
+    
+    switch (mode) {
+        case JAppStartViewControllerModePresent:{
+            [self presentViewController:otherViewController animated:YES completion:nil];
+           break;
+        }
+        case JAppStartViewControllerModePush:{
+            [self.navigationController pushViewController:otherViewController animated:YES];
+            break;
+        }
+        default:
+            break;
+    }
+}
+
+#pragma mark -Finish
 -(void)finish{
+    
     NSArray *viewControllers = self.navigationController.viewControllers;
     if ([viewControllers count] > 1) {//Push
         
