@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E00A60A1CAA49FB001FF36F /* NSObject+JAppViewCtrollerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A6091CAA49FB001FF36F /* NSObject+JAppViewCtrollerManager.m */; };
+		2E00A60D1CAA4DB9001FF36F /* FirstVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A60C1CAA4DB9001FF36F /* FirstVC.m */; };
+		2E00A6101CAA4DCF001FF36F /* SecondVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A60F1CAA4DCF001FF36F /* SecondVC.m */; };
+		2E00A6131CAA4EA1001FF36F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A6121CAA4EA1001FF36F /* BaseViewController.m */; };
 		2EB092791CA12BDF00F2BD57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB092781CA12BDF00F2BD57 /* main.m */; };
 		2EB0927C1CA12BDF00F2BD57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB0927B1CA12BDF00F2BD57 /* AppDelegate.m */; };
 		2EB0927F1CA12BDF00F2BD57 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB0927E1CA12BDF00F2BD57 /* ViewController.m */; };
@@ -36,6 +40,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E00A6081CAA49FB001FF36F /* NSObject+JAppViewCtrollerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+JAppViewCtrollerManager.h"; path = "VC-Manager/NSObject+JAppViewCtrollerManager.h"; sourceTree = "<group>"; };
+		2E00A6091CAA49FB001FF36F /* NSObject+JAppViewCtrollerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+JAppViewCtrollerManager.m"; path = "VC-Manager/NSObject+JAppViewCtrollerManager.m"; sourceTree = "<group>"; };
+		2E00A60B1CAA4DB9001FF36F /* FirstVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstVC.h; sourceTree = "<group>"; };
+		2E00A60C1CAA4DB9001FF36F /* FirstVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstVC.m; sourceTree = "<group>"; };
+		2E00A60E1CAA4DCF001FF36F /* SecondVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondVC.h; sourceTree = "<group>"; };
+		2E00A60F1CAA4DCF001FF36F /* SecondVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondVC.m; sourceTree = "<group>"; };
+		2E00A6111CAA4EA1001FF36F /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		2E00A6121CAA4EA1001FF36F /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		2EB092741CA12BDF00F2BD57 /* ViewConreollerManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewConreollerManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EB092781CA12BDF00F2BD57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2EB0927A1CA12BDF00F2BD57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,6 +66,7 @@
 		2EB0929E1CA12BDF00F2BD57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EB092AC1CA12C2100F2BD57 /* ViewController+JAppViewControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ViewController+JAppViewControllerManager.h"; path = "VC-Manager/ViewController+JAppViewControllerManager.h"; sourceTree = "<group>"; };
 		2EB092AD1CA12C2100F2BD57 /* ViewController+JAppViewControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ViewController+JAppViewControllerManager.m"; path = "VC-Manager/ViewController+JAppViewControllerManager.m"; sourceTree = "<group>"; };
+		2EC9074B1CA90AF2009FAB01 /* JAppViewControllerMangerInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JAppViewControllerMangerInterface.h; path = "VC-Manager/JAppViewControllerMangerInterface.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +122,12 @@
 				2EB0927B1CA12BDF00F2BD57 /* AppDelegate.m */,
 				2EB0927D1CA12BDF00F2BD57 /* ViewController.h */,
 				2EB0927E1CA12BDF00F2BD57 /* ViewController.m */,
+				2E00A6111CAA4EA1001FF36F /* BaseViewController.h */,
+				2E00A6121CAA4EA1001FF36F /* BaseViewController.m */,
+				2E00A60B1CAA4DB9001FF36F /* FirstVC.h */,
+				2E00A60C1CAA4DB9001FF36F /* FirstVC.m */,
+				2E00A60E1CAA4DCF001FF36F /* SecondVC.h */,
+				2E00A60F1CAA4DCF001FF36F /* SecondVC.m */,
 				2EB092801CA12BDF00F2BD57 /* Main.storyboard */,
 				2EB092831CA12BDF00F2BD57 /* Assets.xcassets */,
 				2EB092851CA12BDF00F2BD57 /* LaunchScreen.storyboard */,
@@ -149,6 +168,9 @@
 			children = (
 				2EB092AC1CA12C2100F2BD57 /* ViewController+JAppViewControllerManager.h */,
 				2EB092AD1CA12C2100F2BD57 /* ViewController+JAppViewControllerManager.m */,
+				2EC9074B1CA90AF2009FAB01 /* JAppViewControllerMangerInterface.h */,
+				2E00A6081CAA49FB001FF36F /* NSObject+JAppViewCtrollerManager.h */,
+				2E00A6091CAA49FB001FF36F /* NSObject+JAppViewCtrollerManager.m */,
 			);
 			name = ViewConreollerManager;
 			sourceTree = "<group>";
@@ -284,8 +306,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EB092AE1CA12C2100F2BD57 /* ViewController+JAppViewControllerManager.m in Sources */,
+				2E00A6131CAA4EA1001FF36F /* BaseViewController.m in Sources */,
+				2E00A60D1CAA4DB9001FF36F /* FirstVC.m in Sources */,
 				2EB0927F1CA12BDF00F2BD57 /* ViewController.m in Sources */,
 				2EB0927C1CA12BDF00F2BD57 /* AppDelegate.m in Sources */,
+				2E00A6101CAA4DCF001FF36F /* SecondVC.m in Sources */,
+				2E00A60A1CAA49FB001FF36F /* NSObject+JAppViewCtrollerManager.m in Sources */,
 				2EB092791CA12BDF00F2BD57 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -510,6 +536,7 @@
 				2EB092A31CA12BDF00F2BD57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2EB092A41CA12BDF00F2BD57 /* Build configuration list for PBXNativeTarget "ViewConreollerManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +545,7 @@
 				2EB092A61CA12BDF00F2BD57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2EB092A71CA12BDF00F2BD57 /* Build configuration list for PBXNativeTarget "ViewConreollerManagerUITests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +554,7 @@
 				2EB092A91CA12BDF00F2BD57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

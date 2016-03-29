@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 
+@protocol JAppViewControllerMangerInterface;
 /*!
  *  @brief 显示ViewConreoller模式
  */
@@ -27,8 +28,14 @@ typedef NS_ENUM(NSInteger,JAppStartViewControllerMode) {
 
 /*!
  *  @brief 启动ViewContoller
+ 
+    requestCode  区分用
+ 
  */
--(void)startViewController:(nonnull UIViewController*)otherViewController startMode:(JAppStartViewControllerMode)mode;
+
+-(void)startViewController:(nonnull UIViewController<JAppViewControllerMangerInterface>*)otherViewController startMode:(JAppStartViewControllerMode)mode;
+
+-(void)startViewController:(nonnull UIViewController<JAppViewControllerMangerInterface>*)otherViewController startMode:(JAppStartViewControllerMode)mode requestCode:(int)requestCode bindData:(_Nullable id)data;
 
 /*!
  *   @brief 关闭ViewConTroller

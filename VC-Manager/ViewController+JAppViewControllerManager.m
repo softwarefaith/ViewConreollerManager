@@ -7,16 +7,26 @@
 //
 
 #import "ViewController+JAppViewControllerManager.h"
+#import "JAppViewControllerMangerInterface.h"
 
 @implementation ViewController (JAppViewControllerManager)
 
 
 #pragma mark -Start
 
--(void)startViewController:(UIViewController *)otherViewController startMode:(JAppStartViewControllerMode)mode{
+-(void)startViewController:(UIViewController<JAppViewControllerMangerInterface> *)otherViewController startMode:(JAppStartViewControllerMode)mode{
+    [self startViewController:otherViewController startMode:mode requestCode:0 bindData:nil];
+}
+
+-(void)startViewController:(UIViewController<JAppViewControllerMangerInterface> *)otherViewController startMode:(JAppStartViewControllerMode)mode requestCode:(int)requestCode bindData:(id _Nullable)data{
+    
+    if ([otherViewController respondsToSelector:@selector(onViewControllerReceiveFromRequestCode:bingData:)]) {
+         [otherViewController onViewControllerReceiveFromRequestCode:requestCode bingData:data];
+    }
     
     switch (mode) {
         case JAppStartViewControllerModePresent:{
+            
             [self presentViewController:otherViewController animated:YES completion:nil];
            break;
         }

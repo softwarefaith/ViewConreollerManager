@@ -24,4 +24,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)onViewControllerResultFromRequestCode:(int)requestCode toResultCode:(int)resultCode bingData:(id)data{
+    
+}
+
+- (IBAction)push:(id)sender {
+}
+- (IBAction)present:(id)sender {
+}
+
+
 @end
