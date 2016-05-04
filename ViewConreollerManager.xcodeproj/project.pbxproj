@@ -11,6 +11,8 @@
 		2E00A60D1CAA4DB9001FF36F /* FirstVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A60C1CAA4DB9001FF36F /* FirstVC.m */; };
 		2E00A6101CAA4DCF001FF36F /* SecondVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A60F1CAA4DCF001FF36F /* SecondVC.m */; };
 		2E00A6131CAA4EA1001FF36F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A6121CAA4EA1001FF36F /* BaseViewController.m */; };
+		2E502F511CDA424A009F504A /* JAppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E502F501CDA424A009F504A /* JAppContext.m */; };
+		2E502F531CDA45BB009F504A /* JAppContextTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E502F521CDA45BB009F504A /* JAppContextTestCase.m */; };
 		2EB092791CA12BDF00F2BD57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB092781CA12BDF00F2BD57 /* main.m */; };
 		2EB0927C1CA12BDF00F2BD57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB0927B1CA12BDF00F2BD57 /* AppDelegate.m */; };
 		2EB0927F1CA12BDF00F2BD57 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB0927E1CA12BDF00F2BD57 /* ViewController.m */; };
@@ -48,6 +50,9 @@
 		2E00A60F1CAA4DCF001FF36F /* SecondVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondVC.m; sourceTree = "<group>"; };
 		2E00A6111CAA4EA1001FF36F /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		2E00A6121CAA4EA1001FF36F /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		2E502F4F1CDA424A009F504A /* JAppContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JAppContext.h; path = "VC-Manager/JAppContext.h"; sourceTree = "<group>"; };
+		2E502F501CDA424A009F504A /* JAppContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JAppContext.m; path = "VC-Manager/JAppContext.m"; sourceTree = "<group>"; };
+		2E502F521CDA45BB009F504A /* JAppContextTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAppContextTestCase.m; sourceTree = "<group>"; };
 		2EB092741CA12BDF00F2BD57 /* ViewConreollerManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewConreollerManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EB092781CA12BDF00F2BD57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2EB0927A1CA12BDF00F2BD57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -150,6 +155,7 @@
 			children = (
 				2EB092911CA12BDF00F2BD57 /* ViewConreollerManagerTests.m */,
 				2EB092931CA12BDF00F2BD57 /* Info.plist */,
+				2E502F521CDA45BB009F504A /* JAppContextTestCase.m */,
 			);
 			path = ViewConreollerManagerTests;
 			sourceTree = "<group>";
@@ -171,6 +177,8 @@
 				2EC9074B1CA90AF2009FAB01 /* JAppViewControllerMangerInterface.h */,
 				2E00A6081CAA49FB001FF36F /* NSObject+JAppViewCtrollerManager.h */,
 				2E00A6091CAA49FB001FF36F /* NSObject+JAppViewCtrollerManager.m */,
+				2E502F4F1CDA424A009F504A /* JAppContext.h */,
+				2E502F501CDA424A009F504A /* JAppContext.m */,
 			);
 			name = ViewConreollerManager;
 			sourceTree = "<group>";
@@ -311,6 +319,7 @@
 				2EB0927F1CA12BDF00F2BD57 /* ViewController.m in Sources */,
 				2EB0927C1CA12BDF00F2BD57 /* AppDelegate.m in Sources */,
 				2E00A6101CAA4DCF001FF36F /* SecondVC.m in Sources */,
+				2E502F511CDA424A009F504A /* JAppContext.m in Sources */,
 				2E00A60A1CAA49FB001FF36F /* NSObject+JAppViewCtrollerManager.m in Sources */,
 				2EB092791CA12BDF00F2BD57 /* main.m in Sources */,
 			);
@@ -320,6 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E502F531CDA45BB009F504A /* JAppContextTestCase.m in Sources */,
 				2EB092921CA12BDF00F2BD57 /* ViewConreollerManagerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
