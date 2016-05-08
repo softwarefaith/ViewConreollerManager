@@ -7,7 +7,33 @@
 //
 
 #import "FirstVC.h"
+#import "ViewController+JAppViewControllerManager.h"
 
 @implementation FirstVC
+-(void)dealloc{
+    
+    NSLog(@"FirstVC dealloc");
+}
+
+-(void)viewDidLoad{
+     [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    JAppContext *context = [self JApp_context];
+    
+    NSLog(@"---%@",[context objectForKey:@"FirstVC"]);
+    
+    [context setObject:@"123" forKey:@"japp0"];
+    
+    
+}
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+
+
+}
+
+
+
 
 @end

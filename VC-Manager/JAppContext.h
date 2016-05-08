@@ -11,11 +11,19 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void (^BlockReference)(id object);
+typedef void (^BlockReference)(id owner,__nullable id oldvalue,__nullable id newValue);
 
 
 @interface JAppContext : NSObject
 
+/*!
+ *  @brief default is NO; YES：立即调用绑定的block
+ */
+@property (nonatomic,assign) BOOL updateIfNeed;
+/*!
+ *  @brief default is NO; 依赖于updateIfNeed= YES,block是否移除
+ */
+@property (nonatomic,assign) BOOL removeIfNeed;
 
 /*!
  *  @brief init
@@ -50,11 +58,12 @@ typedef void (^BlockReference)(id object);
 -(void) removeObjectForKey:(NSString *)key;
 
 /*!
- *  @brief 注册对应的回调函数
+ *  @brief 注册事件
  */
 
 -(void) registerCallback:(BlockReference)block forKey:(NSString *)key withObject:(id)object;
 -(void) removeCallbacksForObject:(id)object;
+
 -(void) removeAllCallbacks;
 
 @end

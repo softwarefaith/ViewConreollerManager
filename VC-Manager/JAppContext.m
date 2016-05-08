@@ -8,6 +8,20 @@
 
 #import "JAppContext.h"
 
+@interface JAppContextBlockRef : NSObject
+
+@property(nonatomic,copy) BlockReference block;
+
+@property(nonatomic,weak) id owner;
+
+@end
+
+@implementation JAppContextBlockRef
+
+
+
+@end
+
 NSString *const kJAppDefaultContextName = @"kJAppDefaultContextName";
 
 @interface JAppContext ()
@@ -18,7 +32,10 @@ NSString *const kJAppDefaultContextName = @"kJAppDefaultContextName";
 
 @property (nonatomic,strong) NSMutableDictionary *objectDictionary;
 
+@property (nonatomic,strong) NSMutableDictionary *oldObjectDictionary;
+
 @property (nonatomic,strong) NSMutableDictionary *callBackDictionary;
+
 
 
 @end
@@ -31,7 +48,6 @@ NSString *const kJAppDefaultContextName = @"kJAppDefaultContextName";
 @end
 
 @implementation JAppContext{
-    NSObject *lock;
 }
 
 #pragma mark --Init
@@ -50,7 +66,6 @@ NSString *const kJAppDefaultContextName = @"kJAppDefaultContextName";
     if (self = [super init]) {
         _contextName = [aContextName copy];
         _innerContext = aInnnerContext;
-        lock = [[NSObject alloc] init];
     }
     
     return self;
@@ -68,29 +83,183 @@ NSString *const kJAppDefaultContextName = @"kJAppDefaultContextName";
 #pragma mark --self and innerContext
 -(void)setObject:(id)object forKey:(NSString *)key withContextName:(NSString *)name{
     
-    if (key == nil) {
-        return;
-    }
+    if (key == nil)  return;
     
     JAppContext *conetxt = [self contextWithName:name];
     
-    [conetxt setInternalDictionaryWithObject:object forKey:key];
-
+    if (conetxt) {
+        [conetxt setInternalDictionaryWithObject:object forKey:key];
+        if (conetxt.updateIfNeed) {
+             [conetxt executeBlocksForKey:key obect:object];
+        }
+    }
 }
 -(id)objectForKey:(NSString *)key withContextName:(NSString *)name{
     
+    if(key == nil) return nil;
     
+    JAppContext *conetxt = [self contextWithName:name];
+
+    if (conetxt) {
+        return conetxt.objectDictionary[key];
+    }
     return nil;
 }
 
 -(void)removeObjectForKey:(NSString *)key withContextName:(NSString *)name{
     
+    if(key == nil) return ;
+
+    JAppContext *conetxt = [self contextWithName:name];
+    
+    if (conetxt) {
+        return [conetxt.objectDictionary removeObjectForKey:key];
+    }
+    
+}
+
+#pragma mark --self
+-(void)setObject:(id)object forKey:(NSString *)key{
+    if (key == nil) {
+        return;
+    }
+    if (object == nil) {
+        object = [NSNull null];
+    }
+    
+    [self.objectDictionary setObject:object forKey:key];
+    
+    
+    if(self.updateIfNeed){
+         [self executeBlocksForKey:key obect:object];
+    }
+
+}
+-(id)objectForKey:(NSString *)key{
+    
+    if (key == nil) {
+        return nil;
+    }
+    return self.objectDictionary[key];
+}
+
+-(void)removeObjectForKey:(NSString *)key{
+    if (key == nil) {
+        return ;
+    }
+    [self.objectDictionary removeObjectForKey:key];
+}
+
+#pragma mark --Callback
+-(void)registerCallback:(BlockReference)block forKey:(NSString *)key withObject:(id)object{
+    
+    if (block == nil || key == nil || object == nil) {
+        return;
+    }
+    
+    NSMutableArray *callBackList = [self.callBackDictionary objectForKey:key];
+    
+    if (callBackList == nil) {
+        callBackList = [[NSMutableArray alloc] init];
+        [self.callBackDictionary setObject:callBackList forKey:key];
+    }
+    
+    JAppContextBlockRef *blockRef = [[JAppContextBlockRef alloc] init];
+    blockRef.block = block;
+    blockRef.owner = object;
+    
+    [callBackList addObject:blockRef];
+    
+}
+
+-(void)removeCallbacksForObject:(id)object{
+    
+    if (object == nil) {
+        return;
+    }
+    
+    NSArray *keys = [self.callBackDictionary allKeys];
+    
+    for (NSString *key in keys) {
+        NSMutableArray *callBackList = [self.callBackDictionary objectForKey:key];
+        NSArray *callBackListCopy = callBackList.copy;
+        
+        for (JAppContextBlockRef *block in callBackListCopy ) {
+            
+            if (block.owner == nil || block.owner == object) {
+                [callBackList removeObject:object];
+            }
+        }
+        
+    }
 }
 
 #pragma mark --private method
+
+
+-(void) executeBlocksForKey:(NSString *)key obect:(id)obj{
+    NSMutableArray *removeBlocks = nil;
+    NSArray *blockList = nil;
+    
+    
+    
+    NSMutableArray *blockListAll = self.callBackDictionary[key];
+    
+    if(blockListAll!=nil){
+        
+            blockList = blockListAll.copy;
+    }
+    
+    if(blockList!=nil){
+        for(JAppContextBlockRef *blockReference in blockList){
+            if(blockReference.owner!=nil){
+
+                
+                id old = self.oldObjectDictionary[key];
+                
+                blockReference.block(blockReference.owner,old,obj);
+                [self.oldObjectDictionary setObject:obj forKey:key];
+            }
+            else{
+                if(removeBlocks==nil){
+                    removeBlocks = [[NSMutableArray alloc]init];
+                }
+                
+                [removeBlocks addObject:blockReference];
+            }
+        }
+    }
+    
+    if (!self.removeIfNeed) {
+        return;
+    }
+
+    if(removeBlocks!=nil){
+        
+        NSMutableArray *blockListAll =self.callBackDictionary[key];
+            
+            if(blockListAll!=nil){
+                
+                for(JAppContextBlockRef *blockReference in removeBlocks){
+                    [blockListAll removeObject:blockReference];
+                }
+            }
+    }
+}
+
+
 -(void)setInternalDictionaryWithObject:(id)object forKey:(NSString *)key{
     if (object == nil) {
         object = [NSNull null];
+    }
+    
+    [self.objectDictionary setObject:object forKey:key];
+    
+    if (self.updateIfNeed && self.oldObjectDictionary[key]) {
+        
+    }else{
+        
+       [self.oldObjectDictionary setObject:object forKey:key];
     }
 }
 -(JAppContext *)contextWithName:(NSString *)aContextName{
@@ -120,5 +289,11 @@ NSString *const kJAppDefaultContextName = @"kJAppDefaultContextName";
         _callBackDictionary = [[NSMutableDictionary alloc] init];
     }
     return _callBackDictionary;
+}
+-(NSMutableDictionary *)oldObjectDictionary{
+    if (_oldObjectDictionary == nil) {
+        _oldObjectDictionary = [[NSMutableDictionary alloc] init];
+    }
+    return _oldObjectDictionary;
 }
 @end

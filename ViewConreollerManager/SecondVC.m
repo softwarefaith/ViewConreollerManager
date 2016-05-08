@@ -8,6 +8,17 @@
 
 #import "SecondVC.h"
 
-@implementation SecondVC
 
+@implementation SecondVC
+-(void)dealloc{
+    
+    NSLog(@"FirstVC");
+}
+
+-(void)viewDidLoad{
+    
+    [super viewDidLoad];
+    
+
+}
 @end

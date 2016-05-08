@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JAppViewControllerMangerInterface.h"
 
-@interface ViewController : UIViewController<JAppViewControllerMangerInterface>
+@interface ViewController : UIViewController
 
 
 @end

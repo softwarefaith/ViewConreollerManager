@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E00A60A1CAA49FB001FF36F /* NSObject+JAppViewCtrollerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A6091CAA49FB001FF36F /* NSObject+JAppViewCtrollerManager.m */; };
 		2E00A60D1CAA4DB9001FF36F /* FirstVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A60C1CAA4DB9001FF36F /* FirstVC.m */; };
 		2E00A6101CAA4DCF001FF36F /* SecondVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A60F1CAA4DCF001FF36F /* SecondVC.m */; };
 		2E00A6131CAA4EA1001FF36F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A6121CAA4EA1001FF36F /* BaseViewController.m */; };
 		2E502F511CDA424A009F504A /* JAppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E502F501CDA424A009F504A /* JAppContext.m */; };
 		2E502F531CDA45BB009F504A /* JAppContextTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E502F521CDA45BB009F504A /* JAppContextTestCase.m */; };
+		2E93E8751CDF7471003A32EB /* NSObject+JAppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E93E8741CDF7471003A32EB /* NSObject+JAppContext.m */; };
 		2EB092791CA12BDF00F2BD57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB092781CA12BDF00F2BD57 /* main.m */; };
 		2EB0927C1CA12BDF00F2BD57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB0927B1CA12BDF00F2BD57 /* AppDelegate.m */; };
 		2EB0927F1CA12BDF00F2BD57 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB0927E1CA12BDF00F2BD57 /* ViewController.m */; };
@@ -21,7 +21,7 @@
 		2EB092871CA12BDF00F2BD57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EB092851CA12BDF00F2BD57 /* LaunchScreen.storyboard */; };
 		2EB092921CA12BDF00F2BD57 /* ViewConreollerManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB092911CA12BDF00F2BD57 /* ViewConreollerManagerTests.m */; };
 		2EB0929D1CA12BDF00F2BD57 /* ViewConreollerManagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB0929C1CA12BDF00F2BD57 /* ViewConreollerManagerUITests.m */; };
-		2EB092AE1CA12C2100F2BD57 /* ViewController+JAppViewControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB092AD1CA12C2100F2BD57 /* ViewController+JAppViewControllerManager.m */; };
+		2EDD6F161CDF84600092BB0B /* UIViewController+JAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD6F151CDF84600092BB0B /* UIViewController+JAppViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +42,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2E00A6081CAA49FB001FF36F /* NSObject+JAppViewCtrollerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+JAppViewCtrollerManager.h"; path = "VC-Manager/NSObject+JAppViewCtrollerManager.h"; sourceTree = "<group>"; };
-		2E00A6091CAA49FB001FF36F /* NSObject+JAppViewCtrollerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+JAppViewCtrollerManager.m"; path = "VC-Manager/NSObject+JAppViewCtrollerManager.m"; sourceTree = "<group>"; };
 		2E00A60B1CAA4DB9001FF36F /* FirstVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstVC.h; sourceTree = "<group>"; };
 		2E00A60C1CAA4DB9001FF36F /* FirstVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstVC.m; sourceTree = "<group>"; };
 		2E00A60E1CAA4DCF001FF36F /* SecondVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondVC.h; sourceTree = "<group>"; };
@@ -53,6 +51,8 @@
 		2E502F4F1CDA424A009F504A /* JAppContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JAppContext.h; path = "VC-Manager/JAppContext.h"; sourceTree = "<group>"; };
 		2E502F501CDA424A009F504A /* JAppContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JAppContext.m; path = "VC-Manager/JAppContext.m"; sourceTree = "<group>"; };
 		2E502F521CDA45BB009F504A /* JAppContextTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAppContextTestCase.m; sourceTree = "<group>"; };
+		2E93E8731CDF7471003A32EB /* NSObject+JAppContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+JAppContext.h"; path = "VC-Manager/NSObject+JAppContext.h"; sourceTree = "<group>"; };
+		2E93E8741CDF7471003A32EB /* NSObject+JAppContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+JAppContext.m"; path = "VC-Manager/NSObject+JAppContext.m"; sourceTree = "<group>"; };
 		2EB092741CA12BDF00F2BD57 /* ViewConreollerManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewConreollerManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EB092781CA12BDF00F2BD57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2EB0927A1CA12BDF00F2BD57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -69,9 +69,8 @@
 		2EB092981CA12BDF00F2BD57 /* ViewConreollerManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViewConreollerManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EB0929C1CA12BDF00F2BD57 /* ViewConreollerManagerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewConreollerManagerUITests.m; sourceTree = "<group>"; };
 		2EB0929E1CA12BDF00F2BD57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2EB092AC1CA12C2100F2BD57 /* ViewController+JAppViewControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ViewController+JAppViewControllerManager.h"; path = "VC-Manager/ViewController+JAppViewControllerManager.h"; sourceTree = "<group>"; };
-		2EB092AD1CA12C2100F2BD57 /* ViewController+JAppViewControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ViewController+JAppViewControllerManager.m"; path = "VC-Manager/ViewController+JAppViewControllerManager.m"; sourceTree = "<group>"; };
-		2EC9074B1CA90AF2009FAB01 /* JAppViewControllerMangerInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JAppViewControllerMangerInterface.h; path = "VC-Manager/JAppViewControllerMangerInterface.h"; sourceTree = "<group>"; };
+		2EDD6F141CDF84600092BB0B /* UIViewController+JAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+JAppViewController.h"; path = "VC-Manager/UIViewController+JAppViewController.h"; sourceTree = "<group>"; };
+		2EDD6F151CDF84600092BB0B /* UIViewController+JAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+JAppViewController.m"; path = "VC-Manager/UIViewController+JAppViewController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,13 +171,12 @@
 		2EB092AA1CA12BE500F2BD57 /* ViewConreollerManager */ = {
 			isa = PBXGroup;
 			children = (
-				2EB092AC1CA12C2100F2BD57 /* ViewController+JAppViewControllerManager.h */,
-				2EB092AD1CA12C2100F2BD57 /* ViewController+JAppViewControllerManager.m */,
-				2EC9074B1CA90AF2009FAB01 /* JAppViewControllerMangerInterface.h */,
-				2E00A6081CAA49FB001FF36F /* NSObject+JAppViewCtrollerManager.h */,
-				2E00A6091CAA49FB001FF36F /* NSObject+JAppViewCtrollerManager.m */,
 				2E502F4F1CDA424A009F504A /* JAppContext.h */,
 				2E502F501CDA424A009F504A /* JAppContext.m */,
+				2E93E8731CDF7471003A32EB /* NSObject+JAppContext.h */,
+				2E93E8741CDF7471003A32EB /* NSObject+JAppContext.m */,
+				2EDD6F141CDF84600092BB0B /* UIViewController+JAppViewController.h */,
+				2EDD6F151CDF84600092BB0B /* UIViewController+JAppViewController.m */,
 			);
 			name = ViewConreollerManager;
 			sourceTree = "<group>";
@@ -313,14 +311,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EB092AE1CA12C2100F2BD57 /* ViewController+JAppViewControllerManager.m in Sources */,
+				2EDD6F161CDF84600092BB0B /* UIViewController+JAppViewController.m in Sources */,
 				2E00A6131CAA4EA1001FF36F /* BaseViewController.m in Sources */,
+				2E93E8751CDF7471003A32EB /* NSObject+JAppContext.m in Sources */,
 				2E00A60D1CAA4DB9001FF36F /* FirstVC.m in Sources */,
 				2EB0927F1CA12BDF00F2BD57 /* ViewController.m in Sources */,
 				2EB0927C1CA12BDF00F2BD57 /* AppDelegate.m in Sources */,
 				2E00A6101CAA4DCF001FF36F /* SecondVC.m in Sources */,
 				2E502F511CDA424A009F504A /* JAppContext.m in Sources */,
-				2E00A60A1CAA49FB001FF36F /* NSObject+JAppViewCtrollerManager.m in Sources */,
 				2EB092791CA12BDF00F2BD57 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JAppViewControllerMangerInterface.h"
-@interface BaseViewController : UIViewController<JAppViewControllerMangerInterface>
+#import "NSObject+JAppContext.h"
+
+
+@interface BaseViewController : UIViewController
 
 @end

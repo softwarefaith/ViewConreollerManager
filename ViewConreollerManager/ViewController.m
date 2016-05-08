@@ -8,6 +8,13 @@
 
 #import "ViewController.h"
 
+#import "UIViewController+JAppViewController.h"
+
+#import "FirstVC.h"
+
+#import "SecondVC.h"
+
+
 @interface ViewController ()
 
 @end
@@ -24,13 +31,45 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)onViewControllerResultFromRequestCode:(int)requestCode toResultCode:(int)resultCode bingData:(id)data{
+
+-(void)onViewControllerResultFrombingData:(id)data toResultCode:(int)resultCode{
+    
+
     
 }
 
 - (IBAction)push:(id)sender {
+    FirstVC *first = [[FirstVC alloc] init];
+    JAppContext *jAppContext0 = [[JAppContext alloc] initWithContextName:@"japp0"];
+    jAppContext0.updateIfNeed = YES;
+    [jAppContext0 registerCallback:^(id  _Nonnull object, id  _Nullable oldvalue, id  _Nullable newValue) {
+        
+        NSLog(@"objct ---%@---old--%@--new--%@",object,oldvalue,newValue);
+        
+        
+    } forKey:@"japp0" withObject:self];
+    
+    [jAppContext0 setObject:@"FirstVC" forKey:@"FirstVC"];
+   
+//[self.navigationController pushViewController:first animated:YES];
+    [self startViewController:first startMode:JAppStartViewControllerModePush bindData:jAppContext0];
 }
 - (IBAction)present:(id)sender {
+    FirstVC *first = [[FirstVC alloc] init];
+    JAppContext *jAppContext0 = [[JAppContext alloc] initWithContextName:@"japp0"];
+    jAppContext0.updateIfNeed = YES;
+    [jAppContext0 registerCallback:^(id  _Nonnull object, id  _Nullable oldvalue, id  _Nullable newValue) {
+        
+        NSLog(@"objct ---%@---old--%@--new--%@",object,oldvalue,newValue);
+        
+        
+    } forKey:@"japp0" withObject:self];
+    
+    [jAppContext0 setObject:@"FirstVC" forKey:@"FirstVC"];
+    
+    //[self.navigationController pushViewController:first animated:YES];
+    [self startViewController:first startMode:JAppStartViewControllerModePresent bindData:jAppContext0];
+
 }
 
 
