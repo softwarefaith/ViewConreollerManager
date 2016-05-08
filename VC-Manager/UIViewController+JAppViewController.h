@@ -24,9 +24,6 @@ typedef NS_ENUM(NSInteger,JAppStartViewControllerMode) {
     JAppStartViewControllerModePush
 };
 
-
-
-
 /*!
  *  @brief start ViewContoller
  

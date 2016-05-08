@@ -22,6 +22,7 @@
 		2EB092921CA12BDF00F2BD57 /* ViewConreollerManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB092911CA12BDF00F2BD57 /* ViewConreollerManagerTests.m */; };
 		2EB0929D1CA12BDF00F2BD57 /* ViewConreollerManagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB0929C1CA12BDF00F2BD57 /* ViewConreollerManagerUITests.m */; };
 		2EDD6F161CDF84600092BB0B /* UIViewController+JAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD6F151CDF84600092BB0B /* UIViewController+JAppViewController.m */; };
+		2EDD6F1D1CDF8AA80092BB0B /* JAppAsynViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD6F1C1CDF8AA80092BB0B /* JAppAsynViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		2EB0929E1CA12BDF00F2BD57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EDD6F141CDF84600092BB0B /* UIViewController+JAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+JAppViewController.h"; path = "VC-Manager/UIViewController+JAppViewController.h"; sourceTree = "<group>"; };
 		2EDD6F151CDF84600092BB0B /* UIViewController+JAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+JAppViewController.m"; path = "VC-Manager/UIViewController+JAppViewController.m"; sourceTree = "<group>"; };
+		2EDD6F1B1CDF8AA80092BB0B /* JAppAsynViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JAppAsynViewController.h; path = JAppAsynVC/JAppAsynViewController.h; sourceTree = "<group>"; };
+		2EDD6F1C1CDF8AA80092BB0B /* JAppAsynViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JAppAsynViewController.m; path = JAppAsynVC/JAppAsynViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,7 @@
 		2EB0926B1CA12BDF00F2BD57 = {
 			isa = PBXGroup;
 			children = (
+				2EDD6F1A1CDF8A500092BB0B /* JAppAsynVC */,
 				2EB092AA1CA12BE500F2BD57 /* ViewConreollerManager */,
 				2EB092761CA12BDF00F2BD57 /* ViewConreollerManager */,
 				2EB092901CA12BDF00F2BD57 /* ViewConreollerManagerTests */,
@@ -179,6 +183,15 @@
 				2EDD6F151CDF84600092BB0B /* UIViewController+JAppViewController.m */,
 			);
 			name = ViewConreollerManager;
+			sourceTree = "<group>";
+		};
+		2EDD6F1A1CDF8A500092BB0B /* JAppAsynVC */ = {
+			isa = PBXGroup;
+			children = (
+				2EDD6F1B1CDF8AA80092BB0B /* JAppAsynViewController.h */,
+				2EDD6F1C1CDF8AA80092BB0B /* JAppAsynViewController.m */,
+			);
+			name = JAppAsynVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +330,7 @@
 				2E00A60D1CAA4DB9001FF36F /* FirstVC.m in Sources */,
 				2EB0927F1CA12BDF00F2BD57 /* ViewController.m in Sources */,
 				2EB0927C1CA12BDF00F2BD57 /* AppDelegate.m in Sources */,
+				2EDD6F1D1CDF8AA80092BB0B /* JAppAsynViewController.m in Sources */,
 				2E00A6101CAA4DCF001FF36F /* SecondVC.m in Sources */,
 				2E502F511CDA424A009F504A /* JAppContext.m in Sources */,
 				2EB092791CA12BDF00F2BD57 /* main.m in Sources */,
