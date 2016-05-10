@@ -7,7 +7,7 @@
 //
 
 #import "FirstVC.h"
-#import "ViewController+JAppViewControllerManager.h"
+#import "NSObject+JAppContext.h"
 
 @implementation FirstVC
 -(void)dealloc{
